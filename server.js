@@ -4,6 +4,15 @@ var path = require('path');
 var fs = require('fs');
 
 app.all('*', function(req, res, next){
+  switch (req.host) {
+    case 'mikesmullin.com': return res.redirect('http://www.mikesmullin.com'+req.originalUrl);
+    case 'smullin.org': return res.redirect('http://www.smullin.org'+req.originalUrl);
+    case 'www.mikesmullin.com':
+    case 'www.smullin.org':
+      break;
+    default:
+      return res.send(404, 'Domain not hosted here');
+  }
   if (req.method == "POST" && /mikesmullin.com$/.test(req.host) != null && req.originalUrl == "/wp-comments-post.php") {
     res.send(404, 'Comments disabled');
   }

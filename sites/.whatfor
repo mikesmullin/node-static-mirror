@@ -1,8 +1,10 @@
 put your mirrored domain contents here.
 use symlinks to serve same content on multiple domains.
-e.g. directory structure should look like:
+edit server.js if you want to redirect domains to avoid serving duplicate content.
 
-mikesmullin.com/
-smullin.org/
-www.mikesmullin.com/ -> mikesmullin.comg/
-www.smullin.org/ -> smullin.org/
+e.g. directory structure might look like:
+
+www.mikesmullin.com/
+www.smullin.org/
+mikesmullin.com -> www.mikesmullin.comg/
+smullin.org -> www.smullin.org/
