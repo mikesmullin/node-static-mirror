@@ -11,8 +11,14 @@ Built for NodeJS v0.10.5
 wget --mirror -erobots=off --no-parent --page-requisites --no-host-directories -P sites/ www.mikesmullin.com
 ```
 
-## Notes:
+### Notes:
 
     --convert-links        is a little bit annoying because clean urls like / turn into /index.html
     --no-host-directories  is probably unnecessary now
     -P                     should be sites/
+
+## Starting server
+
+```bash
+sudo node server.js
+```

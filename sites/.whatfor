@@ -1,0 +1,8 @@
+put your mirrored domain contents here.
+use symlinks to serve same content on multiple domains.
+e.g. directory structure should look like:
+
+mikesmullin.com/
+smullin.org/
+www.mikesmullin.com/ -> mikesmullin.comg/
+www.smullin.org/ -> smullin.org/
