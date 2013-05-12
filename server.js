@@ -7,8 +7,10 @@ app.all('*', function(req, res, next){
   switch (req.host) {
     case 'mikesmullin.com': return res.redirect('http://www.mikesmullin.com'+req.originalUrl);
     case 'smullin.org': return res.redirect('http://www.smullin.org'+req.originalUrl);
+    case 'smullinsupply.com': return res.redirect('http://www.smullinsupply.com'+req.originalUrl);
     case 'www.mikesmullin.com':
     case 'www.smullin.org':
+    case 'www.smullinsupply.com':
       break;
     default:
       return res.send(404, 'Domain not hosted here');
@@ -22,12 +24,12 @@ app.all('*', function(req, res, next){
     file = path.join(file, 'index.html')
   }
   var basename = path.basename(file.split('?')[0]);
-  console.log(JSON.stringify({
-    host: req.host,
-    method: req.method,
-    file: file,
-    basename: basename
-  }));
+  //console.log(JSON.stringify({
+  //  host: req.host,
+  //  method: req.method,
+  //  file: file,
+  //  basename: basename
+  //}));
   fs.exists(file, function(exists) {
     if (exists) {
       fs.readFile(file, function(err, data) {
