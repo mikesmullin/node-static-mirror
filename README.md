@@ -8,7 +8,7 @@ Built for NodeJS v0.10.5
 ## Mirroring
 
 ```bash
-wget --mirror -erobots=off --no-parent --page-requisites --no-host-directories -P sites/ www.mikesmullin.com
+wget --mirror -erobots=off --adjust-extension --convert-links --no-parent --page-requisites --no-host-directories -P sites/ www.mikesmullin.com
 ```
 
 ### Notes:
